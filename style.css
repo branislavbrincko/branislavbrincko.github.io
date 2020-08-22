@@ -1,0 +1,51 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: "PT Serif", serif;
+}
+
+body {
+  background: rgb(173, 216, 230);
+  color: white;
+}
+
+.container {
+  margin: 25vh auto;
+  width: 60%;
+  font-size: 25px;
+}
+
+.container section {
+  margin-top: 25px;
+}
+
+span {
+  color: rgb(56, 56, 56);
+  white-space: nowrap;
+}
+
+section span {
+  position: relative;
+  z-index: 1;
+}
+
+section span::after {
+  content: "";
+  position: absolute;
+  bottom: 5px;
+  width: 100%;
+  left: 0;
+  height: 5px;
+  background: #71b5cc;
+  z-index: -1;
+}
+
+@media only screen and (max-width: 600px) {
+  .container {
+    font-size: 20px;
+  }
+}
